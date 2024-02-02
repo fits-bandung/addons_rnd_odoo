@@ -1,0 +1,288 @@
+<odoo>
+    <data noupdate="1">
+        <!--        HEADER AWAL TER A GROSS-->
+        <record id="kategori_ter_a_gross" model="payslip.kategori.ter">
+            <field name="nama">TER-A Gross</field>
+            <field name="tunjangan_pajak">gross</field>
+        </record>
+        <!--        STATUS SIPIL TER A GROSS-->
+        <record id="line_status_sipil_ter_a_gross_1" model="payslip.line.status.sipil">
+            <field name="status_sipil_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="status_sipil">TK/0</field>
+        </record>
+        <record id="line_status_sipil_ter_a_gross_2" model="payslip.line.status.sipil">
+            <field name="status_sipil_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="status_sipil">TK/1</field>
+        </record>
+        <record id="line_status_sipil_ter_a_gross_3" model="payslip.line.status.sipil">
+            <field name="status_sipil_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="status_sipil">K/0</field>
+        </record>
+        <!--        ISI TER/RANGE TER A GROSS-->
+        <record id="line_kategori_ter_a_gross_1" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">0</field>
+            <field name="bruto_bulanan_akhir">5400000</field>
+            <field name="persentase_nilai">0</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_2" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">5400001</field>
+            <field name="bruto_bulanan_akhir">5650000</field>
+            <field name="persentase_nilai">0.0025</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_3" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">5650001</field>
+            <field name="bruto_bulanan_akhir">5950000</field>
+            <field name="persentase_nilai">0.0050</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_4" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">5950001</field>
+            <field name="bruto_bulanan_akhir">6300000</field>
+            <field name="persentase_nilai">0.0075</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_5" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">6300001</field>
+            <field name="bruto_bulanan_akhir">6750000</field>
+            <field name="persentase_nilai">0.0100</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_6" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">6750001</field>
+            <field name="bruto_bulanan_akhir">7500000</field>
+            <field name="persentase_nilai">0.0125</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_7" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">7500001</field>
+            <field name="bruto_bulanan_akhir">8550000</field>
+            <field name="persentase_nilai">0.0150</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_8" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">8550001</field>
+            <field name="bruto_bulanan_akhir">9650000</field>
+            <field name="persentase_nilai">0.0175</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_9" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">9650001</field>
+            <field name="bruto_bulanan_akhir">10050000</field>
+            <field name="persentase_nilai">0.0200</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_10" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">10050001</field>
+            <field name="bruto_bulanan_akhir">10350000</field>
+            <field name="persentase_nilai">0.0225</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_11" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">10350001</field>
+            <field name="bruto_bulanan_akhir">10700000</field>
+            <field name="persentase_nilai">0.0250</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_12" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">10700001</field>
+            <field name="bruto_bulanan_akhir">11050000</field>
+            <field name="persentase_nilai">0.0300</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_13" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">11050001</field>
+            <field name="bruto_bulanan_akhir">11600000</field>
+            <field name="persentase_nilai">0.0350</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_14" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">11600001</field>
+            <field name="bruto_bulanan_akhir">12500000</field>
+            <field name="persentase_nilai">0.0400</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_15" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">12500001</field>
+            <field name="bruto_bulanan_akhir">13750000</field>
+            <field name="persentase_nilai">0.0500</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_16" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">13750001</field>
+            <field name="bruto_bulanan_akhir">15100000</field>
+            <field name="persentase_nilai">0.0600</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_17" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">15100001</field>
+            <field name="bruto_bulanan_akhir">16950000</field>
+            <field name="persentase_nilai">0.0700</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_18" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">16950001</field>
+            <field name="bruto_bulanan_akhir">19750000</field>
+            <field name="persentase_nilai">0.0800</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_19" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">19750001</field>
+            <field name="bruto_bulanan_akhir">24150000</field>
+            <field name="persentase_nilai">0.0900</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_20" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">24150001</field>
+            <field name="bruto_bulanan_akhir">26450000</field>
+            <field name="persentase_nilai">0.1000</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_21" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">26450001</field>
+            <field name="bruto_bulanan_akhir">28000000</field>
+            <field name="persentase_nilai">0.1100</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_22" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">28000001</field>
+            <field name="bruto_bulanan_akhir">30050000</field>
+            <field name="persentase_nilai">0.1200</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_23" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">30050001</field>
+            <field name="bruto_bulanan_akhir">32400000</field>
+            <field name="persentase_nilai">0.1300</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_24" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">32400001</field>
+            <field name="bruto_bulanan_akhir">35400000</field>
+            <field name="persentase_nilai">0.1400</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_25" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">35400001</field>
+            <field name="bruto_bulanan_akhir">39100000</field>
+            <field name="persentase_nilai">0.1500</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_26" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">39100001</field>
+            <field name="bruto_bulanan_akhir">43850000</field>
+            <field name="persentase_nilai">0.1600</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_27" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">43850001</field>
+            <field name="bruto_bulanan_akhir">47800000</field>
+            <field name="persentase_nilai">0.1700</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_28" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">47800001</field>
+            <field name="bruto_bulanan_akhir">51400000</field>
+            <field name="persentase_nilai">0.1800</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_29" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">51400001</field>
+            <field name="bruto_bulanan_akhir">56300000</field>
+            <field name="persentase_nilai">0.1900</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_30" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">56300001</field>
+            <field name="bruto_bulanan_akhir">62200000</field>
+            <field name="persentase_nilai">0.2000</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_31" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">62200001</field>
+            <field name="bruto_bulanan_akhir">68600000</field>
+            <field name="persentase_nilai">0.2100</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_32" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">68600001</field>
+            <field name="bruto_bulanan_akhir">77500000</field>
+            <field name="persentase_nilai">0.2200</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_33" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">77500001</field>
+            <field name="bruto_bulanan_akhir">89000000</field>
+            <field name="persentase_nilai">0.2300</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_34" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">89000001</field>
+            <field name="bruto_bulanan_akhir">103000000</field>
+            <field name="persentase_nilai">0.2400</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_35" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">103000001</field>
+            <field name="bruto_bulanan_akhir">125000000</field>
+            <field name="persentase_nilai">0.2500</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_36" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">125000001</field>
+            <field name="bruto_bulanan_akhir">157000000</field>
+            <field name="persentase_nilai">0.2600</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_37" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">157000001</field>
+            <field name="bruto_bulanan_akhir">206000000</field>
+            <field name="persentase_nilai">0.2700</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_38" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">206000001</field>
+            <field name="bruto_bulanan_akhir">337000000</field>
+            <field name="persentase_nilai">0.2800</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_39" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">337000001</field>
+            <field name="bruto_bulanan_akhir">454000000</field>
+            <field name="persentase_nilai">0.2900</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_40" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">454000001</field>
+            <field name="bruto_bulanan_akhir">550000000</field>
+            <field name="persentase_nilai">0.3000</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_41" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">550000001</field>
+            <field name="bruto_bulanan_akhir">695000000</field>
+            <field name="persentase_nilai">0.3100</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_42" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">695000001</field>
+            <field name="bruto_bulanan_akhir">910000000</field>
+            <field name="persentase_nilai">0.3200</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_43" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">910000001</field>
+            <field name="bruto_bulanan_akhir">1400000000</field>
+            <field name="persentase_nilai">0.3300</field>
+        </record>
+        <record id="line_kategori_ter_a_gross_44" model="payslip.line.kategori.ter">
+            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="bruto_bulanan_awal">1400000001</field>
+            <field name="bruto_bulanan_akhir">9999999999</field>
+            <field name="persentase_nilai">0.3400</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_payslip_kategori_ter,payslip_kategori_ter,model_payslip_kategori_ter,,1,1,1,1
+access_payslip_line_kategori_ter,payslip_line_kategori_ter,model_payslip_line_kategori_ter,,1,1,1,1
+access_payslip_line_status_sipil,payslip_line_status_sipil,model_payslip_line_status_sipil,,1,1,1,1
+access_hr_payslip_line_bruto_pph,hr_payslip_line_bruto_pph,model_hr_payslip_line_bruto_pph,,1,1,1,1

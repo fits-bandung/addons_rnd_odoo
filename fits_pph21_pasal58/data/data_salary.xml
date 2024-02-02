@@ -1,0 +1,222 @@
+<odoo>
+	<data  noupdate="1">
+        <!-- CATEGORY -->
+
+        <record id="TAX" model="hr.salary.rule.category">
+            <field name="name">Tax</field>
+            <field name="code">TAX</field>
+        </record>
+
+        <!--TOTAL PENDAPATAN BRUTO Sebelum Pph-->
+        <record id="hr_rule_bruto_sebelum_pph" model="hr.salary.rule">
+            <field name="name">Total Pendapatan Bruto Sebelum PPH</field>
+            <field name="sequence" eval="31"/>
+            <field name="code">BRUTO58</field>
+            <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="condition_select">none</field>
+            <field name="condition_python">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.GP + categories.ALW</field>
+        </record>
+
+
+        <!--Biaya Jabatan-->
+        <record id="hr_rule_biaya_jabatan" model="hr.salary.rule">
+            <field name="name">--Biaya Jabatan</field>
+            <field name="sequence" eval="42"/>
+            <field name="code">BJ58</field>
+            <field name="category_id" ref="TAX"/>
+            <field name="condition_select">none</field>
+            <field name="condition_python">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+D = BRUTO58 * 0.05
+if D > 500000 :
+	result = 500000 * 12
+else :
+	result = D * 12
+            </field>
+        </record>
+
+
+        <!--PTKP-->
+        <record id="hr_rule_ptkp" model="hr.salary.rule">
+            <field name="name">--PTKP</field>
+            <field name="sequence" eval="43"/>
+            <field name="code">PTKP58</field>
+            <field name="category_id" ref="TAX"/>
+            <field name="condition_select">none</field>
+            <field name="condition_python">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+StatusPajak = employee.status_sipil
+
+if StatusPajak == "TK/0" :
+	PTKP58 =  54000000
+
+elif StatusPajak == "TK/1" :
+	PTKP58 =  58500000
+
+elif StatusPajak == "TK/2" :
+	PTKP58 =  63000000
+
+elif StatusPajak == "TK/3" :
+	PTKP58 =  67500000
+
+elif StatusPajak == "K/0" :
+	PTKP58 =  58500000
+
+elif StatusPajak == "K/1" :
+	PTKP58 =  63000000
+
+elif StatusPajak == "K/2" :
+	PTKP58 =  67500000
+
+elif StatusPajak == "K/3" :
+	PTKP58 =  72000000
+
+else :
+	PTKP58 =  0
+
+result = PTKP58
+            </field>
+        </record>
+
+        <!--PKP-->
+        <record id="hr_rule_pph21_bulanan" model="hr.salary.rule">
+            <field name="name">--PKP</field>
+            <field name="sequence" eval="44"/>
+            <field name="code">PKP58</field>
+            <field name="category_id" ref="TAX"/>
+            <field name="condition_select">none</field>
+            <field name="condition_python">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result =  payslip.pendapatan_bruto_tahunan - BJ58 - PTKP58</field>
+        </record>
+
+        <!--Pph21 Setahun-->
+        <record id="hr_rule_pph21_setahun" model="hr.salary.rule">
+            <field name="name">PPH21 Setahun</field>
+            <field name="sequence" eval="45"/>
+            <field name="code">PPH58</field>
+            <field name="category_id" ref="TAX"/>
+            <field name="condition_select">none</field>
+            <field name="condition_python">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+if employee.no_npwp == False :
+    p = [6,18,30,36,42]
+else :
+    p = [5,15,25,30,35]
+
+if payslip.tunjangan_pajak == "grossup" :
+ if PKP58 <= 57000000 and PKP58 > 0 :
+    PPH58 = (PKP58 * p[0] / 95)
+
+ elif PKP58 > 57000001 and PKP58 <= 218500000 :
+    PPH58 = (57000000 * p[0] / 95)
+    PPH58 = 3000000 + ((PKP58 - 57000000) * p[1] / 85)
+
+ elif PKP58 > 218500001 and PKP58 <= 406000000 :
+    PPH58 = (57000000 * p[0] / 95)
+    PPH58 = 3000000 + ((PKP58 - 57000000) * p[1] / 85)
+    PPH58 = 31500000 + ((PKP58 - 218500000) * p[2] / 75)
+
+ elif PKP58 > 406000001 and PKP58 <= 3556000000 :
+    PPH58 = (57000000 * p[0] / 95)
+    PPH58 = 3000000 + ((PKP58 - 57000000) * p[1] / 85)
+    PPH58 = 31500000 + ((PKP58 - 218500000) * p[2] / 75)
+    PPH58 = 94000000 + ((PKP58 - 406000000) * p[3] / 70)
+
+ elif PKP58 > 3556000001 :
+    PPH58 = (57000000 * p[0] / 95)
+    PPH58 = 3000000 + ((PKP58 - 57000000) * p[1] / 85)
+    PPH58 = 31500000 + ((PKP58 - 218500000) * p[2] / 75)
+    PPH58 = 94000000 + ((PKP58 - 406000000) * p[3] / 70)
+    PPH58 = 1444000000 + ((PKP58 - 3556000000) * p[4] / 65)
+
+ else :
+    PPH58 = 0
+else :
+ if PKP58 <= 60000000 and PKP58 > 0 :
+     PPH58 = (PKP58 * p[0] / 100)
+
+ elif PKP58 > 60000000 and PKP58 <= 250000000 :
+        PPH58 = (60000000 * p[0] / 100)
+        PPH58 = PPH58 + ((PKP58 - 60000000) * p[1] / 100)
+
+ elif PKP58 > 250000000 and PKP58 <= 600000000 :
+       PPH58 = (60000000 * p[0] / 100)
+       PPH58 = PPH58 + ((PKP58 - 60000000) * p[1] / 100)
+       PPH58 = PPH58 + ((PKP58 - 250000000) * p[2] / 100)
+
+ elif PKP58 > 500000000 and PKP58 <= 5000000000  :
+       PPH58 = (60000000 * p[0] / 100)
+       PPH58 = PPH58 + ((PKP58 - 60000000) * p[1] / 100)
+       PPH58 = PPH58 + ((PKP58 - 250000000) * p[2] / 100)
+       PPH58 = PPH58 + ((PKP58 - 500000000) * p[3] / 100)
+
+ elif PKP58 > 5000000000 :
+       PPH58 = (60000000 * p[0] / 100)
+       PPH58 = PPH58 + ((PKP58 - 60000000) * p[1] / 100)
+       PPH58 = PPH58 + ((PKP58 - 250000000) * p[2] / 100)
+       PPH58 = PPH58 + ((PKP58 - 500000000) * p[3] / 100)
+       PPH58 = PPH58 + ((PKP58 - 5000000000) * p[4] / 100)
+ else :
+      PPH58 = 0
+
+result = PPH58
+            </field>
+        </record>
+
+         <!--Tunjangan Pajak-->
+        <record id="hr_rule_tj_pajak" model="hr.salary.rule">
+            <field name="name">Tunjangan Pajak</field>
+            <field name="sequence" eval="46"/>
+            <field name="code">TJPJK58</field>
+            <field name="category_id" ref="TAX"/>
+            <field name="appears_on_payslip">True</field>
+            <field name="condition_select">none</field>
+            <field name="condition_python">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+if payslip.tunjangan_pajak == "gross":
+    result = 0
+else:
+    if payslip.is_tahunan == True:
+      result = PPH58 - payslip.pph21_tahunan
+    else :
+      result = TJPJK58
+            </field>
+        </record>
+
+        <!--Potongan Pph21-->
+        <record id="hr_rule_pot_pph" model="hr.salary.rule">
+            <field name="name">Potongan Pph21</field>
+            <field name="sequence" eval="61"/>
+            <field name="code">PPPH58</field>
+            <field name="category_id" ref="TAX"/>
+            <field name="appears_on_payslip">True</field>
+            <field name="condition_select">none</field>
+            <field name="condition_python">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+metode = payslip.tunjangan_pajak
+
+if metode == "grossup":
+  if payslip.is_tahunan == True :
+    result = TJPJK58
+  else :
+    result = payslip.pph21_bulanan
+else :
+  if payslip.is_tahunan == True :
+    result = PPH58 - payslip.pph21_tahunan
+  else :
+    result = payslip.pph21_bulanan
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>
