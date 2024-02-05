@@ -85,7 +85,7 @@ class HRPayslip(models.Model):
 
     def _compute_pendapatan_bruto(self):
         for payslip in self:
-            gross_amount = sum(line.amount for line in payslip.line_ids if line.category_id.code == 'GROSS')
+            gross_amount = sum(line.amount for line in payslip.line_ids if line.category_id.code == 'GrossPph')
             payslip.pendapatan_bruto_bulanan = gross_amount
 
 

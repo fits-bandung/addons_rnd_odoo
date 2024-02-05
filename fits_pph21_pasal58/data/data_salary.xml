@@ -6,13 +6,17 @@
             <field name="name">Tax</field>
             <field name="code">TAX</field>
         </record>
+        <record id="GROSSPPH" model="hr.salary.rule.category">
+            <field name="name">GrossPph</field>
+            <field name="code">GrossPph</field>
+        </record>
 
         <!--TOTAL PENDAPATAN BRUTO Sebelum Pph-->
         <record id="hr_rule_bruto_sebelum_pph" model="hr.salary.rule">
             <field name="name">--Total Pendapatan Bruto Sebelum PPH</field>
             <field name="sequence" eval="31"/>
             <field name="code">BRUTO58</field>
-            <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="category_id" ref="GROSSPPH"/>
             <field name="appears_on_payslip">False</field>
             <field name="condition_select">none</field>
             <field name="condition_python">none</field>
@@ -191,7 +195,7 @@ else:
     if payslip.is_tahunan == True:
       result = PPH58 - payslip.pph21_tahunan
     else :
-      result = TJPJK58
+      result = payslip.pph21_bulanan
             </field>
         </record>
 
