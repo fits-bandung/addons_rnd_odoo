@@ -13,6 +13,7 @@
             <field name="sequence" eval="31"/>
             <field name="code">BRUTO58</field>
             <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="appears_on_payslip">False</field>
             <field name="condition_select">none</field>
             <field name="condition_python">none</field>
             <field name="amount_select">code</field>
@@ -26,6 +27,7 @@
             <field name="sequence" eval="42"/>
             <field name="code">BJ58</field>
             <field name="category_id" ref="TAX"/>
+            <field name="appears_on_payslip">False</field>
             <field name="condition_select">none</field>
             <field name="condition_python">none</field>
             <field name="amount_select">code</field>
@@ -45,6 +47,7 @@ else :
             <field name="sequence" eval="43"/>
             <field name="code">PTKP58</field>
             <field name="category_id" ref="TAX"/>
+            <field name="appears_on_payslip">False</field>
             <field name="condition_select">none</field>
             <field name="condition_python">none</field>
             <field name="amount_select">code</field>
@@ -88,6 +91,7 @@ result = PTKP58
             <field name="sequence" eval="44"/>
             <field name="code">PKP58</field>
             <field name="category_id" ref="TAX"/>
+            <field name="appears_on_payslip">False</field>
             <field name="condition_select">none</field>
             <field name="condition_python">none</field>
             <field name="amount_select">code</field>
@@ -100,6 +104,7 @@ result = PTKP58
             <field name="sequence" eval="45"/>
             <field name="code">PPH58</field>
             <field name="category_id" ref="TAX"/>
+            <field name="appears_on_payslip">False</field>
             <field name="condition_select">none</field>
             <field name="condition_python">none</field>
             <field name="amount_select">code</field>
