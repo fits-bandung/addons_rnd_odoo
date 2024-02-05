@@ -9,7 +9,7 @@
 
         <!--TOTAL PENDAPATAN BRUTO Sebelum Pph-->
         <record id="hr_rule_bruto_sebelum_pph" model="hr.salary.rule">
-            <field name="name">Total Pendapatan Bruto Sebelum PPH</field>
+            <field name="name">--Total Pendapatan Bruto Sebelum PPH</field>
             <field name="sequence" eval="31"/>
             <field name="code">BRUTO58</field>
             <field name="category_id" ref="hr_payroll.GROSS"/>
@@ -100,7 +100,7 @@ result = PTKP58
 
         <!--Pph21 Setahun-->
         <record id="hr_rule_pph21_setahun" model="hr.salary.rule">
-            <field name="name">PPH21 Setahun</field>
+            <field name="name">--Pph21 Setahun</field>
             <field name="sequence" eval="45"/>
             <field name="code">PPH58</field>
             <field name="category_id" ref="TAX"/>
