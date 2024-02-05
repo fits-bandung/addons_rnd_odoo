@@ -50,7 +50,7 @@
             <field name="persentase_nilai">0.0100</field>
         </record>
         <record id="line_kategori_ter_a_gross_6" model="payslip.line.kategori.ter">
-            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="kategori_ter_id" ref="fits_pph21_pasal58.kategori_ter_a_gross"/>
             <field name="bruto_bulanan_awal">6750001</field>
             <field name="bruto_bulanan_akhir">7500000</field>
             <field name="persentase_nilai">0.0125</field>
@@ -188,7 +188,7 @@
             <field name="persentase_nilai">0.1800</field>
         </record>
         <record id="line_kategori_ter_a_gross_29" model="payslip.line.kategori.ter">
-            <field name="kategori_ter_id" ref="payslip_kategori_ter.kategori_ter_a_gross"/>
+            <field name="kategori_ter_id" ref="fits_pph21_pasal58.kategori_ter_a_gross"/>
             <field name="bruto_bulanan_awal">51400001</field>
             <field name="bruto_bulanan_akhir">56300000</field>
             <field name="persentase_nilai">0.1900</field>
