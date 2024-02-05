@@ -31,7 +31,7 @@
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
 D = BRUTO58 * 0.05
-if D > 500000 :
+if D &gt; 500000 :
 	result = 500000 * 12
 else :
 	result = D * 12
@@ -110,25 +110,25 @@ else :
     p = [5,15,25,30,35]
 
 if payslip.tunjangan_pajak == "grossup" :
- if PKP58 <= 57000000 and PKP58 > 0 :
+ if PKP58 &lt;= 57000000 and PKP58 &gt; 0 :
     PPH58 = (PKP58 * p[0] / 95)
 
- elif PKP58 > 57000001 and PKP58 <= 218500000 :
+ elif PKP58 &gt; 57000001 and PKP58 &lt;= 218500000 :
     PPH58 = (57000000 * p[0] / 95)
     PPH58 = 3000000 + ((PKP58 - 57000000) * p[1] / 85)
 
- elif PKP58 > 218500001 and PKP58 <= 406000000 :
+ elif PKP58 &gt; 218500001 and PKP58 &lt;= 406000000 :
     PPH58 = (57000000 * p[0] / 95)
     PPH58 = 3000000 + ((PKP58 - 57000000) * p[1] / 85)
     PPH58 = 31500000 + ((PKP58 - 218500000) * p[2] / 75)
 
- elif PKP58 > 406000001 and PKP58 <= 3556000000 :
+ elif PKP58 &gt; 406000001 and PKP58 &lt;= 3556000000 :
     PPH58 = (57000000 * p[0] / 95)
     PPH58 = 3000000 + ((PKP58 - 57000000) * p[1] / 85)
     PPH58 = 31500000 + ((PKP58 - 218500000) * p[2] / 75)
     PPH58 = 94000000 + ((PKP58 - 406000000) * p[3] / 70)
 
- elif PKP58 > 3556000001 :
+ elif PKP58 &gt; 3556000001 :
     PPH58 = (57000000 * p[0] / 95)
     PPH58 = 3000000 + ((PKP58 - 57000000) * p[1] / 85)
     PPH58 = 31500000 + ((PKP58 - 218500000) * p[2] / 75)
@@ -138,25 +138,25 @@ if payslip.tunjangan_pajak == "grossup" :
  else :
     PPH58 = 0
 else :
- if PKP58 <= 60000000 and PKP58 > 0 :
+ if PKP58 &lt;= 60000000 and PKP58 &gt; 0 :
      PPH58 = (PKP58 * p[0] / 100)
 
- elif PKP58 > 60000000 and PKP58 <= 250000000 :
+ elif PKP58 &gt; 60000000 and PKP58 &lt;= 250000000 :
         PPH58 = (60000000 * p[0] / 100)
         PPH58 = PPH58 + ((PKP58 - 60000000) * p[1] / 100)
 
- elif PKP58 > 250000000 and PKP58 <= 600000000 :
+ elif PKP58 &gt; 250000000 and PKP58 &lt;= 600000000 :
        PPH58 = (60000000 * p[0] / 100)
        PPH58 = PPH58 + ((PKP58 - 60000000) * p[1] / 100)
        PPH58 = PPH58 + ((PKP58 - 250000000) * p[2] / 100)
 
- elif PKP58 > 500000000 and PKP58 <= 5000000000  :
+ elif PKP58 &gt; 500000000 and PKP58 &lt;= 5000000000  :
        PPH58 = (60000000 * p[0] / 100)
        PPH58 = PPH58 + ((PKP58 - 60000000) * p[1] / 100)
        PPH58 = PPH58 + ((PKP58 - 250000000) * p[2] / 100)
        PPH58 = PPH58 + ((PKP58 - 500000000) * p[3] / 100)
 
- elif PKP58 > 5000000000 :
+ elif PKP58 &gt; 5000000000 :
        PPH58 = (60000000 * p[0] / 100)
        PPH58 = PPH58 + ((PKP58 - 60000000) * p[1] / 100)
        PPH58 = PPH58 + ((PKP58 - 250000000) * p[2] / 100)
