@@ -34,7 +34,7 @@
                     <newline/>
                     <group string="Line Ketegori TER">
                         <field name="kategori_ter_ids" nolabel="1">
-                            <tree string="Payslip Line Ketegori TER" editable="bottom">
+                            <tree string="Payslip Line Ketegori TER" editable="bottom" limit="50">
                                 <field name="bruto_bulanan_awal"/>
                                 <field name="bruto_bulanan_akhir"/>
                                 <field name="persentase_nilai"/>
