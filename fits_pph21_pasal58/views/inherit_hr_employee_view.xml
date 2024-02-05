@@ -8,6 +8,9 @@
                 <field name="gender" position="after">
                     <field name="status_sipil"/>
                 </field>
+                <field name="identification_id" position="after">
+                    <field name="no_npwp"/>
+                </field>
             </field>
         </record>
     </data>

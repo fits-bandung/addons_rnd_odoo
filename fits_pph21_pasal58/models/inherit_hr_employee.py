@@ -10,4 +10,4 @@ class HREmployees(models.Model):
                                      ('K/0', 'K/0'), ('K/1', 'K/1'),
                                      ('K/2', 'K/2'), ('K/3', 'K/3')], string="Status Sipil")
 
-
+    no_npwp = fields.Char(string="NPWP")
