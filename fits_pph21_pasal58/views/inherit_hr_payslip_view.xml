@@ -49,12 +49,12 @@
             <field name="type">tree</field>
             <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
             <field name="arch" type="xml">
-                <!--                <xpath expr="//field[@name='rule_ids']/tree/field[@name='sequence']" position="replace">-->
-                <!--                    <field name="sequence" invisible="0" widget="handle"/>-->
-                <!--                </xpath>-->
-                <xpath expr="//notebook/page[@string='Salary Rules']/rule_ids/tree/field[@name='sequence']" position="replace">
-                    <field name="sequence" widget="handle"/>
-                </xpath>
+                                <xpath expr="//page/field[@name='rule_ids']/tree/field[@name='sequence']" position="replace">
+                                    <field name="sequence" widget="handle"/>
+                                </xpath>
+<!--                <xpath expr="//notebook/page[@string='Salary Rules']/rule_ids/tree/field[@name='sequence']" position="replace">-->
+<!--                    <field name="sequence" widget="handle"/>-->
+<!--                </xpath>-->
             </field>
         </record>
         <record id="view_inherit_hr_salary_rule" model="ir.ui.view">
