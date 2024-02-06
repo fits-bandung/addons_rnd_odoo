@@ -17,15 +17,15 @@
                     <page string="Kalkulasi Nilai Tahunan">
                         <group>
                             <field name="bruto_pph_ids" nolabel="1">
-                            <tree string="Kalkulasi Nilai Tahunan">
-                                <field name="ref"/>
-                                <field name="payslip_name"/>
-                                <field name="date_from"/>
-                                <field name="date_to"/>
-                                <field name="bruto_bulanan" sum="Total Bruto Bulanan"/>
-                                <field name="pph21_bulanan" sum="Total Pph21 Bulanan"/>
-                                <field name="status"/>
-                            </tree>
+                                <tree string="Kalkulasi Nilai Tahunan">
+                                    <field name="ref"/>
+                                    <field name="payslip_name"/>
+                                    <field name="date_from"/>
+                                    <field name="date_to"/>
+                                    <field name="bruto_bulanan" sum="Total Bruto Bulanan"/>
+                                    <field name="pph21_bulanan" sum="Total Pph21 Bulanan"/>
+                                    <field name="status"/>
+                                </tree>
                             </field>
                         </group>
                     </page>
@@ -46,14 +46,18 @@
         <record id="view_inherit_hr_payroll_structure" model="ir.ui.view">
             <field name="name">inherit.hr.payroll.structure</field>
             <field name="model">hr.payroll.structure</field>
-            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='rule_ids']/tree/field[@name='sequence']" position="replace">
-                    <field name="sequence" invisible="0" widget="handle"/>
+                <!--                <xpath expr="//field[@name='rule_ids']/tree/field[@name='sequence']" position="replace">-->
+                <!--                    <field name="sequence" invisible="0" widget="handle"/>-->
+                <!--                </xpath>-->
+                <xpath expr="//notebook/page[@string='Salary Rules']/rule_ids/tree/field[@name='sequence']" position="replace">
+                    <field name="sequence" widget="handle"/>
                 </xpath>
             </field>
         </record>
-         <record id="view_inherit_hr_salary_rule" model="ir.ui.view">
+        <record id="view_inherit_hr_salary_rule" model="ir.ui.view">
             <field name="name">inherit.hr.salary.rule</field>
             <field name="model">hr.salary.rule</field>
             <field name="inherit_id" ref="hr_payroll.hr_salary_rule_list"/>
