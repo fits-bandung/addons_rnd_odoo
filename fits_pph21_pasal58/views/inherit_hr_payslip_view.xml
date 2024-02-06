@@ -13,11 +13,6 @@
                     <field name="is_tahunan"/>
                     <field name="tunjangan_pajak"/>
                 </field>
-<!--                <xpath expr="//form/sheet/notebook/page[3]" position="after">-->
-<!--                    <page string="Kalkulasi Nilai Tahunan">-->
-<!--                        <field name="bruto_pph_ids"/>-->
-<!--                    </page>-->
-<!--                </xpath>-->
                 <xpath expr="//sheet/notebook/page[3]" position="after">
                     <page string="Kalkulasi Nilai Tahunan">
                         <group>
@@ -46,6 +41,26 @@
                     <field name="is_tahunan"/>
                 </field>
 
+            </field>
+        </record>
+        <record id="view_inherit_hr_payroll_structure" model="ir.ui.view">
+            <field name="name">inherit.hr.payroll.structure</field>
+            <field name="model">hr.payroll.structure</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page/field[@name='rule_ids']/tree/field[@name='sequence']" position="replace">
+                    <field name="sequence" invisible="0" widget="handle"/>
+                </xpath>
+            </field>
+        </record>
+         <record id="view_inherit_hr_salary_rule" model="ir.ui.view">
+            <field name="name">inherit.hr.salary.rule</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="hr_payroll.hr_salary_rule_list"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='sequence']" position="replace">
+                    <field name="sequence" invisible="0" widget="handle"/>
+                </xpath>
             </field>
         </record>
 

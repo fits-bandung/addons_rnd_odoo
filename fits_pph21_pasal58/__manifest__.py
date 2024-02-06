@@ -10,7 +10,7 @@
        penghasilan berdasarkan ketentuan Pasal 58 UU PPh.
     """,
     'author': "PT Fujicon Priangan Perdana",
-    'website': "https://erp.fujicon-japan.com/",
+    'website': "https://fujicon-japan.com/",
     'images': ['images/tax.png'],
     'category': 'Human Resources',
     'version': '0.1',
