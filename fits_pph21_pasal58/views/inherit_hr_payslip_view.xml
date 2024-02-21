@@ -16,7 +16,7 @@
                 <xpath expr="//sheet/notebook/page[3]" position="after">
                     <page string="Kalkulasi Nilai Tahunan">
                         <group>
-                            <field name="bruto_pph_ids" nolabel="1">
+                            <field name="bruto_pph_ids" nolabel="1" readonly="1">
                                 <tree string="Kalkulasi Nilai Tahunan">
                                     <field name="ref"/>
                                     <field name="payslip_name"/>
