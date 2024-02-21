@@ -3,7 +3,7 @@
         <record id="view_inherit_hr_payslip_form" model="ir.ui.view">
             <field name="name">inherit.hr.payslip.form</field>
             <field name="model">hr.payslip</field>
-            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="inherit_id" ref="om_hr_payroll.view_hr_payslip_form"/>
             <field name="arch" type="xml">
                 <field name="name" position="after">
                     <field name="pph21_tahunan"/>
@@ -16,7 +16,7 @@
                 <xpath expr="//sheet/notebook/page[3]" position="after">
                     <page string="Kalkulasi Nilai Tahunan">
                         <group>
-                            <field name="bruto_pph_ids" nolabel="1">
+                            <field name="bruto_pph_ids" nolabel="1" readonly="1">
                                 <tree string="Kalkulasi Nilai Tahunan">
                                     <field name="ref"/>
                                     <field name="payslip_name"/>
@@ -35,7 +35,7 @@
         <record id="view_inherit_hr_payslip_run_form" model="ir.ui.view">
             <field name="name">inherit.hr.payslip.run.form</field>
             <field name="model">hr.payslip.run</field>
-            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="inherit_id" ref="om_hr_payroll.hr_payslip_run_form"/>
             <field name="arch" type="xml">
                 <field name="credit_note" position="before">
                     <field name="is_tahunan"/>
@@ -47,7 +47,7 @@
             <field name="name">inherit.hr.payroll.structure</field>
             <field name="model">hr.payroll.structure</field>
             <field name="type">tree</field>
-            <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
+            <field name="inherit_id" ref="om_hr_payroll.view_hr_employee_grade_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//page/field[@name='rule_ids']/tree/field[@name='sequence']" position="replace">
                     <field name="sequence"/>
@@ -57,7 +57,7 @@
         <record id="view_inherit_hr_salary_rule" model="ir.ui.view">
             <field name="name">inherit.hr.salary.rule</field>
             <field name="model">hr.salary.rule</field>
-            <field name="inherit_id" ref="hr_payroll.hr_salary_rule_list"/>
+            <field name="inherit_id" ref="om_hr_payroll.hr_salary_rule_list"/>
             <field name="arch" type="xml">
                 <xpath expr="//tree/field[@name='sequence']" position="replace">
                     <field name="sequence"/>
