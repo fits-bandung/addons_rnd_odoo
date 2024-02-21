@@ -14,7 +14,7 @@
     'images': ['images/tax.png'],
     'category': 'Human Resources',
     'version': '0.1',
-    'depends': ['hr','hr_payroll','hr_contract'],
+    'depends': ['hr','om_hr_payroll','hr_contract'],
     'data': [
         'security/ir.model.access.csv',
         'views/payslip_kategori_ter_view.xml',

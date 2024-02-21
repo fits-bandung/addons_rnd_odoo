@@ -23,34 +23,20 @@
                     <group>
                         <field name="tunjangan_pajak"/>
                     </group>
-                    <newline/>
-                    <group string="Line Status Sipil">
-                        <field name="status_sipil_ter_ids" nolabel="1">
-                            <tree string="Status Sipil" editable="bottom">
-                                <field name="status_sipil"/>
-                            </tree>
-                        </field>
-                    </group>
-                    <newline/>
-                    <group string="Line Ketegori TER">
-                        <field name="kategori_ter_ids" nolabel="1">
-                            <tree string="Payslip Line Ketegori TER" editable="bottom" limit="50">
-                                <field name="bruto_bulanan_awal"/>
-                                <field name="bruto_bulanan_akhir"/>
-                                <field name="persentase_nilai"/>
-                            </tree>
-                        </field>
-                    </group>
-                    <!--                    <newline/>-->
-                    <!--                    <group string="Line Ketegori TER">-->
-                    <!--                        <field name="kategori_ter_ids" nolabel="1">-->
-                    <!--                            <tree string="Payslip Line Ketegori TER" editable="bottom">-->
-                    <!--                                <field name="bruto_bulanan_awal"/>-->
-                    <!--                                <field name="bruto_bulanan_akhir"/>-->
-                    <!--                                <field name="persentase_nilai"/>-->
-                    <!--                            </tree>-->
-                    <!--                        </field>-->
-                    <!--                    </group>-->
+                    <separator string="Line Status Sipil"/>
+                    <field name="status_sipil_ter_ids" colspan="4" nolabel="1">
+                        <tree string="Status Sipil" editable="bottom">
+                            <field name="status_sipil"/>
+                        </tree>
+                    </field>
+                    <separator string="Line Ketegori TER"/>
+                    <field name="kategori_ter_ids" colspan="4" nolabel="1">
+                        <tree string="Payslip Line Ketegori TER" editable="bottom" limit="50">
+                            <field name="bruto_bulanan_awal"/>
+                            <field name="bruto_bulanan_akhir"/>
+                            <field name="persentase_nilai"/>
+                        </tree>
+                    </field>
                 </form>
             </field>
         </record>
@@ -60,6 +46,6 @@
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem action="payslip_kategori_ter_view" id="menu_payslip_kategori_ter_view"
-                  parent="hr_payroll.menu_hr_payroll_configuration" sequence="20"/>
+                  parent="om_hr_payroll.menu_hr_payroll_configuration" sequence="100"/>
     </data>
 </openerp>
