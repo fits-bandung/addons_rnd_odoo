@@ -147,7 +147,7 @@ class HRPayslip(models.Model):
 
 
 
-    @api.multi
+    #@api.multi
     def compute_sheet(self):
         # Call the original compute_sheet method from the parent class
         super(HRPayslip, self).compute_sheet()
