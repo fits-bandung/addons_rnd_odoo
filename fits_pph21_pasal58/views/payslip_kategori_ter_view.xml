@@ -41,16 +41,6 @@
                             </tree>
                         </field>
                     </group>
-                    <!--                    <newline/>-->
-                    <!--                    <group string="Line Ketegori TER">-->
-                    <!--                        <field name="kategori_ter_ids" nolabel="1">-->
-                    <!--                            <tree string="Payslip Line Ketegori TER" editable="bottom">-->
-                    <!--                                <field name="bruto_bulanan_awal"/>-->
-                    <!--                                <field name="bruto_bulanan_akhir"/>-->
-                    <!--                                <field name="persentase_nilai"/>-->
-                    <!--                            </tree>-->
-                    <!--                        </field>-->
-                    <!--                    </group>-->
                 </form>
             </field>
         </record>
@@ -60,6 +50,6 @@
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem action="payslip_kategori_ter_view" id="menu_payslip_kategori_ter_view"
-                  parent="hr_payroll.menu_hr_payroll_configuration" sequence="20"/>
+                  parent="om_hr_payroll.menu_hr_payroll_configuration" sequence="100"/>
     </data>
 </openerp>
