@@ -10,11 +10,16 @@
        penghasilan berdasarkan ketentuan Pasal 58 UU PPh.
     """,
     'author': "PT Fujicon Priangan Perdana",
+    'sequence': -100,
     'website': "https://fujicon-japan.com/",
     'images': ['images/tax.png'],
     'category': 'Human Resources',
+    'version': '16.0.1.0.0',
+    'price': '191.05',
+    'currency': 'USD',
+    'license': 'LGPL-3',
     'version': '0.1',
-    'depends': ['hr','om_hr_payroll','hr_contract'],
+    'depends': ['hr', 'om_hr_payroll', 'hr_contract'],
     'data': [
         'security/ir.model.access.csv',
         'views/payslip_kategori_ter_view.xml',
@@ -29,7 +34,9 @@
         'data/data_pph21_ter_b_grossup.xml',
         'data/data_pph21_ter_c_grossup.xml',
     ],
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'demo': [],
+    'qweb': [],
+    'installable': True,
+    'auto_install': False,
+
 }
