@@ -18,7 +18,6 @@
     'price': '191.05',
     'currency': 'USD',
     'license': 'LGPL-3',
-    'version': '0.1',
     'depends': ['hr', 'om_hr_payroll', 'hr_contract'],
     'data': [
         'security/ir.model.access.csv',
