@@ -12,12 +12,12 @@
     'author': "PT Fujicon Priangan Perdana",
     'sequence': -100,
     'website': "https://fujicon-japan.com/",
-    'images': ['images/tax.png'],
+    'images': ['images/fpp.jpg'],
     'category': 'Human Resources',
     'version': '15.0.1.0.0',
-    'price': '191.05',
+    'price': 300.00,
     'currency': 'USD',
-    'license': 'LGPL-3',
+    'license': 'AGPL-3',
     'depends': ['hr', 'om_hr_payroll', 'hr_contract'],
     'data': [
         'security/ir.model.access.csv',
@@ -37,4 +37,5 @@
     'qweb': [],
     'installable': True,
     'auto_install': False,
+    'application': True,
 }
