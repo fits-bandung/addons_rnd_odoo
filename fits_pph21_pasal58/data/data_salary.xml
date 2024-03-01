@@ -36,11 +36,11 @@
             <field name="condition_python">none</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-D = BRUTO58 * 0.05
-if D &gt; 500000 :
-	result = 500000 * 12
+D = payslip.pendapatan_bruto_tahunan * 0.05
+if D &gt; 6000000 :
+	result = 6000000
 else :
-	result = D * 12
+	result = D
             </field>
         </record>
 
