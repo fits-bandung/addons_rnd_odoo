@@ -12,7 +12,7 @@
     'author': "PT Fujicon Priangan Perdana",
     'sequence': -100,
     'website': "https://fujicon-japan.com/",
-    'images': ['images/fpp.jpg'],
+    'images': ['images/fpp.gif'],
     'category': 'Human Resources',
     'version': '12.0.1.0.0',
     'price': 300.00,
